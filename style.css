@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  main {
+    padding: 100px 0px 100px 0px;
+    margin: 50px 50px;
+    background: rgba(142, 135, 135, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(142, 135, 135, 0.3);
+    transition: margin 2s;
+  }
+  
+  main:hover {
+    margin: 0px 0px;
+  }
+  
+  a {
+    color: #2d2e2e;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .formulario {
+    padding: 30px;
+  }
+  
+  .form-input {
+    font-family: "Quickand", sans-serif;
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    background-color: transparent;
+  }
+  
+  .send-btn {
+    padding: 8px;
+    border: 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+  }
+  
+  h1 {
+    font-size: 12rem;
+    text-align: center;
+    margin: 100px 200px 650px 200px;
+  }
+  
+  .golf-sinfondo {
+    z-index: -1;
+    position: fixed;
+    top: 470px;
+    left: 40px;
+    width: 770px;
+  }
+  
+  .audi-sinfondo {
+    z-index: -1;
+    position: fixed;
+    top: 600px;
+    right: 100px;
+    width: 650px;
+  }
+  
+  .index-subtitle {
+    font-family: "Quicksand", sans-serif;
+    font-size: 4rem;
+    margin: 0px 100px 100px 100px;
+    color: white;
+    text-align: center;
+  }
+  
+  footer {
+    font-family: "Quicksand", sans-serif;
+    padding: 70px 50px 20px 50px;
+  }
+  footer h3 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+  }
+  footer p {
+    font-size: 1.8rem;
+  }
+  
+  .nav-item {
+    font-size: 1.5rem;
+    margin: 10px 0px 0px 10px;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .navbar-toggler {
+    margin-right: 40px;
+    z-index: 1000;
+    position: fixed;
+      top: 30px;
+      right: 30px;
+    border: 0;
+  }
+  
+  .titulo-cart {
+    font-family: "Quicksand", sans-serif;
+    font-size: 3.5rem;
+    margin: 10px;
+  }
+  
+  .cart-icon {
+    width: 40px;
+  }
+  
+  .offcanvas {
+    background-color: #a9aaab;
+  }
+  
+  .form-select {
+    width: 60px;
+    height: 40px;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    background-color: transparent;
+    border-color: black;
+    margin-left: 20px;
+  }
+  
+  .price-multip {
+    display: flex;
+  }
+  
+  /* CARDS */
+  .card-text {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .cards-fotos {
+    margin: 70px 50px 15px 50px;
+  }
+  
+  .card-text {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .card-btn {
+    background-color: black;
+    padding: 5px;
+    margin: 0px 45px 30px 45px;
+  }
+  
+  /* WALLPAPER */
+  body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(101, 0, 94) 3%, rgb(60, 132, 206) 38%, rgb(48, 238, 226) 68%, rgb(255, 25, 25) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  .wave {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+  }
+  
+  .wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+  }
+  
+  @keyframes wave {
+    2% {
+      transform: translateX(1);
+    }
+    25% {
+      transform: translateX(-25%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    75% {
+      transform: translateX(-25%);
+    }
+    100% {
+      transform: translateX(1);
+    }
+  }
+  
+  .index-footer {
+    background-color: #2d2e2e;
+    color: #a9aaab;
+  }
+  
+  .cards-vw {
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    width: 285px;
+    transition: width 1s;
+  }
+  
+  .cards-vw:hover {
+    width: 310px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 5rem;
+      margin: 50px 50px 100px 50px;
+      text-align: left;
+    }
+    .nav-item {
+      font-size: 1.5rem;
+    }
+    main {
+      padding: 40px 0px 30px 0px;
+      margin-top: 180px;
+    }
+    .index-subtitle {
+      font-size: 2rem;
+      margin: 20px;
+    }
+    footer h3 {
+      font-size: 3rem;
+    }
+    footer p {
+      font-size: 1.5rem;
+    }
+    .card-bmwaudi {
+      height: 300px;
+      width: 260px;
+    }
+    .card-text {
+      font-size: 1.25rem;
+    }
+    .navbar-toggler {
+      top: 30px;
+      right: 8px;
+      border: 0;
+    }
+    .golf-sinfondo {
+      top: 280px;
+      left: 250px;
+      width: 350px;
+    }
+    .audi-sinfondo {
+      display: none;
+    }
+    .form-input {
+      width: 80px;
+    }
+  }
