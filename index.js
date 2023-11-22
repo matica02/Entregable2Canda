@@ -24,49 +24,18 @@ function crearUsuario(e){
 
 const carrito= []
 
-const autos= [
-{
-    id: 1,
-    nombre: "Lamborghini Aventador",
-    precio: 120,
-    img: "./img/lamborghini.png",
-},
-{
-    id: 2,
-    nombre: "Mercedes AMG GTR",
-    precio: 90,
-    img: "../img/mercedes.png",
-},
-{
-    id: 3,
-    nombre: "Volkswagen Golf R",
-    precio: 70,
-    img: "../img/volkswagen.png",
-},
-{
-    id: 4,
-    nombre: "Porsche GT3RS",
-    precio: 110,
-    img: "../img/porsche.png",  
-},
-{
-    id: 5,
-    nombre: "Audi R8",
-    precio: 100,
-    img: "../img/audir8.png",
-},
-{
-    id: 6,
-    nombre: "BMW M4",
-    precio: 80,
-    img: "../img/m4.png",
-}
-]
-
 const contenedorAutos= document.querySelector("#contenedorAutos")
 const contenedorCarrito= document.querySelector("#contenedorCarrito")
 
-function crearCards(){
+async function encontrarCards() {
+    const resp= await fetch("./productos.json")
+    const autos= await resp.json()
+    console.log(autos)
+    crearCards(autos)
+}
+encontrarCards()
+
+function crearCards(autos){
     autos.forEach((auto) => {
         let contenedorAuto = document.createElement("div")
         contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto col-sm-12 col-md-2 col-lg-2">
@@ -77,16 +46,28 @@ function crearCards(){
             <a class="card-text card-btn rounded" id="${auto.id}" href="#">ADD TO CART</a>
           </div>
       </div> `
-    
         contenedorAutos.appendChild(contenedorAuto)
         const btnAgregar= document.getElementById(`${auto.id}`)
-        btnAgregar.addEventListener("click" , () => agregarACarrito(auto.id))
+        btnAgregar.addEventListener("click" , () => confirmarAgregar())
+        function confirmarAgregar() {
+            Swal.fire({
+                title:"¿Esta seguro de que quiere agregar este producto al carrito?",
+                icon: "question",
+                showDenyButton: true,
+                confirmButtonText: "Agregar",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    agregarACarrito(autos,auto.id)
+                } else if (result.isDenied) {
+                    Swal.fire("El producto no ha sido agregado", "", "error");
+                }
+            })
+
+        }
     })
 }
 
-crearCards();
-
-function agregarACarrito(id){
+function agregarACarrito(autos,id){
     const autoEncontrado= autos.find((auto) => auto.id == id)
     carrito.push(autoEncontrado)
     console.log(carrito)
@@ -111,7 +92,22 @@ mostrarCarrito()
 
 
 
-
+/* function crearCards(autos){
+    autos.forEach((auto) => {
+        let contenedorAuto = document.createElement("div")
+        contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto col-sm-12 col-md-2 col-lg-2">
+        <img class="rounded" src="${auto.img}"
+          <div class="card-body">
+            <h3 class="card-text">${auto.nombre}</h3> 
+            <p class="card-text">Price: ${auto.precio} USD</p> 
+            <a class="card-text card-btn rounded" id="${auto.id}" href="#">ADD TO CART</a>
+          </div>
+      </div> `
+        contenedorAutos.appendChild(contenedorAuto)
+        const btnAgregar= document.getElementById(`${auto.id}`)
+        btnAgregar.addEventListener("click" , () => agregarACarrito(autos,auto.id))
+    })
+} */
 
 
 

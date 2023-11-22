@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Lamborghini Aventador",
+        "precio": 120,
+        "img": "./img/lamborghini.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Mercedes AMG GTR",
+        "precio": 90,
+        "img": "../img/mercedes.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Volkswagen Golf R",
+        "precio": 70,
+        "img": "../img/volkswagen.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Porsche GT3RS",
+        "precio": 110,
+        "img": "../img/porsche.png" 
+    },
+    {
+        "id": 5,
+        "nombre": "Audi R8",
+        "precio": 100,
+        "img": "../img/audir8.png"
+    },
+    {
+        "id": 6,
+        "nombre": "BMW M4",
+        "precio": 80,
+        "img": "../img/m4.png"
+    }
+    ]
