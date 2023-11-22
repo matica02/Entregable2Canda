@@ -34,5 +34,17 @@
         "nombre": "BMW M4",
         "precio": 80,
         "img": "../img/m4.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Bugatti Chiron",
+        "precio": 150,
+        "img": "../img/bugatti.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Bentley Continental GT",
+        "precio": 130,
+        "img": "../img/bentley.png"
     }
     ]

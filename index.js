@@ -38,14 +38,14 @@ encontrarCards()
 function crearCards(autos){
     autos.forEach((auto) => {
         let contenedorAuto = document.createElement("div")
-        contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto col-sm-12 col-md-2 col-lg-2">
-        <img class="rounded" src="${auto.img}"
+        contenedorAuto.classList.add("card", "cards-vw", "mx-auto", "col-sm-12", "col-md-2", "col-lg-2",)
+        contenedorAuto.innerHTML = 
+        `<img class="rounded" src="${auto.img}">
           <div class="card-body">
             <h3 class="card-text">${auto.nombre}</h3> 
             <p class="card-text">Price: ${auto.precio} USD</p> 
             <a class="card-text card-btn rounded" id="${auto.id}" href="#">ADD TO CART</a>
-          </div>
-      </div> `
+          </div>`
         contenedorAutos.appendChild(contenedorAuto)
         const btnAgregar= document.getElementById(`${auto.id}`)
         btnAgregar.addEventListener("click" , () => confirmarAgregar())
