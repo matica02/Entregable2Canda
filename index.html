@@ -15,15 +15,6 @@
 <body>
 
       <header>
-        <div>
-          <form class="formulario" id="form">
-            <input class="rounded form-input" placeholder=" FIRST NAME" id="nombre" type="text">
-            <input class="rounded form-input" placeholder=" LAST NAME" id="apellido" type="text">
-            <input class="rounded form-input" placeholder=" AGE" id="edad" type="text">
-            <input class="rounded form-input" placeholder=" E-MAIL" type="email" name="" id="email">
-            <button class="send-btn rounded" type="submit">SIGN UP</button>
-        </form>    
-        </div>
         <nav class="navbar">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -32,7 +23,10 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-body">
                 <h3 class="titulo-cart">Cart</h3>
+                <p id="contenedorPrecio" class="precioTotal"></p>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="contenedorCarrito"></ul>
+                <a class="card-text rounded buy-btn" href="#">Purchase</a>
+                
               </div>
             </div>
           </div>
@@ -50,6 +44,15 @@
         <section class="container-fluid">
           <div class="cards-fotos row gap-5" id="contenedorAutos"></div>
         </section>
+        <div>
+          <form class="formulario" id="form">
+            <input class="rounded form-input" placeholder=" FIRST NAME" id="nombre" type="text">
+            <input class="rounded form-input" placeholder=" LAST NAME" id="apellido" type="text">
+            <input class="rounded form-input" placeholder=" AGE" id="edad" type="text">
+            <input class="rounded form-input" placeholder=" E-MAIL" type="email" name="" id="email">
+            <button class="send-btn rounded" type="submit">SIGN UP</button>
+          </form>    
+        </div>
       </main>
   
       <footer class="index-footer">

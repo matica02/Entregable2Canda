@@ -27,6 +27,8 @@
   
   .formulario {
     padding: 30px;
+    margin-top: 100px;
+    margin-left: 50px;
   }
   
   .form-input {
@@ -47,9 +49,9 @@
   }
   
   h1 {
-    font-size: 12rem;
+    font-size: 13rem;
     text-align: center;
-    margin: 100px 200px 650px 200px;
+    margin: 150px 200px 650px 200px;
   }
   
   .golf-sinfondo {
@@ -57,7 +59,7 @@
     position: fixed;
     top: 470px;
     left: 40px;
-    width: 770px;
+    width: 800px;
   }
   
   .audi-sinfondo {
@@ -65,7 +67,7 @@
     position: fixed;
     top: 600px;
     right: 100px;
-    width: 650px;
+    width: 720px;
   }
   
   .index-subtitle {
@@ -105,12 +107,27 @@
   
   .titulo-cart {
     font-family: "Quicksand", sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 10px;
   }
   
   .cart-icon {
     width: 40px;
+  }
+
+  .precioTotal {
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+  }
+
+  .buy-btn {
+    background-color: black;
+    padding: 5px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
   }
   
   .offcanvas {
@@ -125,10 +142,6 @@
     background-color: transparent;
     border-color: black;
     margin-left: 20px;
-  }
-  
-  .price-multip {
-    display: flex;
   }
   
   /* CARDS */

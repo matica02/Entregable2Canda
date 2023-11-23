@@ -1,50 +1,58 @@
 [
     {
         "id": 1,
-        "nombre": "Lamborghini Aventador",
-        "precio": 120,
-        "img": "./img/lamborghini.png"
+        "nombre": "Bugatti Chiron",
+        "precio": 150,
+        "img": "../img/bugatti.png",
+        "cantidad": 1
     },
     {
         "id": 2,
-        "nombre": "Mercedes AMG GTR",
-        "precio": 90,
-        "img": "../img/mercedes.png"
+        "nombre": "Bentley Continental GT",
+        "precio": 130,
+        "img": "../img/bentley.png",
+        "cantidad": 0
     },
     {
         "id": 3,
-        "nombre": "Volkswagen Golf R",
-        "precio": 70,
-        "img": "../img/volkswagen.png"
+        "nombre": "Lamborghini Aventador",
+        "precio": 120,
+        "img": "./img/lamborghini.png",
+        "cantidad": 1
     },
     {
         "id": 4,
         "nombre": "Porsche GT3RS",
         "precio": 110,
-        "img": "../img/porsche.png" 
+        "img": "../img/porsche.png" ,
+        "cantidad": 1
     },
     {
         "id": 5,
         "nombre": "Audi R8",
         "precio": 100,
-        "img": "../img/audir8.png"
+        "img": "../img/audir8.png",
+        "cantidad": 1
     },
     {
         "id": 6,
-        "nombre": "BMW M4",
-        "precio": 80,
-        "img": "../img/m4.png"
+        "nombre": "Mercedes AMG GTR",
+        "precio": 90,
+        "img": "../img/mercedes.png",
+        "cantidad": 1
     },
     {
         "id": 7,
-        "nombre": "Bugatti Chiron",
-        "precio": 150,
-        "img": "../img/bugatti.png"
+        "nombre": "BMW M4",
+        "precio": 80,
+        "img": "../img/m4.png",
+        "cantidad": 1
     },
     {
         "id": 8,
-        "nombre": "Bentley Continental GT",
-        "precio": 130,
-        "img": "../img/bentley.png"
+        "nombre": "Volkswagen Golf R",
+        "precio": 70,
+        "img": "../img/volkswagen.png",
+        "cantidad": 1
     }
-    ]
+]
