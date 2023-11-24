@@ -92,7 +92,7 @@
   
   .nav-item {
     font-size: 1.5rem;
-    margin: 10px 0px 0px 10px;
+    margin: 10px 0px 20px 10px;
     font-family: "Oswald", sans-serif;
   }
   
@@ -129,7 +129,17 @@
     bottom: 50px;
     right: 50px;
   }
-  
+
+  .borrar-btn {
+    background-color: black;
+    font-size: 1rem;
+    font-family: "Oswald", sans-serif;
+    padding: 5px;
+    color: white;
+    width: 50px;
+    border: 0px;
+  }
+
   .offcanvas {
     background-color: #a9aaab;
   }

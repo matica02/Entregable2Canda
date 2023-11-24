@@ -62,7 +62,6 @@ function crearCards(autos){
                     Swal.fire("The product has not been added to the cart", "", "error");
                 }
             })
-
         }
     })
 }
@@ -85,16 +84,33 @@ function mostrarCarrito() {
     contenedorCarrito.innerHTML = "";
     carrito.forEach((auto) => {
         let contenedorProducto = document.createElement("li");
-        const precioXCantidad = auto.precio * auto.cantidad; 
-        contenedorProducto.innerHTML = `
-            <li class="nav-item">
+        const precioTotalProducto = auto.precio * auto.cantidad;
+        contenedorProducto.innerHTML = 
+            `<li class="nav-item">
                 <p>${auto.nombre}</p>
-                <p>${auto.precio.toFixed(2)} USD x ${auto.cantidad} = ${precioXCantidad.toFixed(2)} USD</p>
-            </li>`;
+                <p>${auto.precio.toFixed(2)} USD x ${auto.cantidad} = ${precioTotalProducto.toFixed(2)} USD</p>
+                <button class="borrar-btn rounded" data-id="${auto.id}">Borrar</button>
+            </li>`;            
         contenedorCarrito.appendChild(contenedorProducto);
+    });
+    const btnsBorrar = document.querySelectorAll(".borrar-btn");
+    btnsBorrar.forEach(btn => {
+        btn.addEventListener("click", function() {
+            const productoABorrar = this.getAttribute("data-id");
+            borrarProducto(productoABorrar);
+        });
     });
 }
 mostrarCarrito()
+
+function borrarProducto(id) {
+    const indice = carrito.findIndex((auto) => auto.id == id);
+    if (indice !== -1) {
+        carrito.splice(indice, 1);
+        mostrarCarrito();
+        calcularTotal();
+    }
+}
 
 const contenedorPrecio = document.querySelector("#contenedorPrecio");
 function calcularTotal() {
@@ -123,5 +139,4 @@ function confirmarCompra() {
             Swal.fire("The purchase has been canceled", "", "error");
         }
     }) */
-
 }
